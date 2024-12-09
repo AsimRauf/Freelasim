@@ -3,15 +3,6 @@ import { useEffect, useState } from 'react'
 import { motion, TargetAndTransition } from 'framer-motion'
 import { useCursor } from '@/context/CursorContext'
 
-type CursorVariant = 'default' | 'work'
-
-type CursorStyles = {
-    width: string
-    height: string
-    backgroundColor: string
-    mixBlendMode?: string
-}
-
 const cursorVariants = {
     default: {
         width: '16px',
