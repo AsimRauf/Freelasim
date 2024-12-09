@@ -114,7 +114,16 @@
   }
 
   .statsGrid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Keep 2 columns on mobile */
+    gap: 1rem; /* Reduce gap for mobile */
+  }
+
+  .statCard {
+    padding: 1.5rem 1rem; /* Smaller padding for mobile */
+  }
+
+  .number {
+    font-size: 1.5rem; /* Smaller font for mobile */
   }
 
   .textContent h2 {

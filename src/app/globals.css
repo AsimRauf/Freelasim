@@ -17,13 +17,14 @@ body {
 
 
 
-/* For mobile devices, restore default cursor */
+/* Hide custom cursor on mobile */
 @media (max-width: 768px) {
   * {
-    cursor: auto;
+    cursor: auto !important; /* Force default cursor */
   }
+  
   .custom-cursor {
-    display: none;
+    display: none !important; /* Hide custom cursor component */
   }
 }
 

@@ -1,5 +1,5 @@
 "use client"
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 type CursorContextType = {
   cursorVariant: 'default' | 'work';
@@ -10,9 +10,22 @@ const CursorContext = createContext<CursorContextType | undefined>(undefined);
 
 export const CursorProvider = ({ children }: { children: React.ReactNode }) => {
   const [cursorVariant, setCursorVariant] = useState<'default' | 'work'>('default');
-  
-  // Debug log
-  console.log('Current cursor variant:', cursorVariant);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  if (isMobile) {
+    return <>{children}</>;
+  }
 
   return (
     <CursorContext.Provider value={{ cursorVariant, setCursorVariant }}>
