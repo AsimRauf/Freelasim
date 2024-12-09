@@ -1,0 +1,23 @@
+.workSection {
+  min-height: 100vh;
+  position: relative;
+  padding: 4rem 1rem;
+  margin-top: 80px; /* Adjust this value based on your navbar height */
+}
+
+.imageContainer {
+  width: 90vw;
+  height: 100vh;
+  position: sticky;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.imageContainer:last-child {
+  overflow: visible;
+}
+
+.image {
+  object-fit: cover;
+  border-radius: 2rem;
+}

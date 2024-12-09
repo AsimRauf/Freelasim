@@ -1,17 +1,14 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Inter, Poppins } from 'next/font/google'
+import Navbar from "@/components/Navbar";
+import CustomCursor from "@/components/CustomCursor";
+import { CursorProvider } from '@/context/CursorContext';
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,15 +17,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" className={poppins.className}>
+      <body>
+        <CursorProvider>
+          <CustomCursor />
+          <Navbar />
+          <main>
+            {children}
+          </main>
+        </CursorProvider>
       </body>
     </html>
   );
