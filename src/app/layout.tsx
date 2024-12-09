@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import Navbar from "@/components/Navbar";
 import CustomCursor from "@/components/CustomCursor";
 import { CursorProvider } from '@/context/CursorContext';
