@@ -1,41 +1,41 @@
 "use client"
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react'
+
+type CursorVariant = 'default' | 'work'
 
 type CursorContextType = {
-  cursorVariant: 'default' | 'work';
-  setCursorVariant: (variant: 'default' | 'work') => void;
-};
+  cursorVariant: CursorVariant
+  setCursorVariant: (variant: CursorVariant) => void
+}
 
-const CursorContext = createContext<CursorContextType | undefined>(undefined);
+const CursorContext = createContext<CursorContextType>({
+  cursorVariant: 'default',
+  setCursorVariant: () => {},
+})
 
 export const CursorProvider = ({ children }: { children: React.ReactNode }) => {
-  const [cursorVariant, setCursorVariant] = useState<'default' | 'work'>('default');
-  const [isMobile, setIsMobile] = useState(false);
+  const [cursorVariant, setCursorVariant] = useState<CursorVariant>('default')
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
+    setMounted(true)
+  }, [])
 
-  if (isMobile) {
-    return <>{children}</>;
+  if (!mounted) {
+    return <>{children}</>
   }
 
   return (
     <CursorContext.Provider value={{ cursorVariant, setCursorVariant }}>
       {children}
     </CursorContext.Provider>
-  );
-};
+  )
+}
 
 export const useCursor = () => {
-  const context = useContext(CursorContext);
-  if (!context) throw new Error('useCursor must be used within a CursorProvider');
-  return context;
-};
+  const context = useContext(CursorContext)
+  if (!context) {
+    throw new Error('useCursor must be used within a CursorProvider')
+  }
+  return context
+}

@@ -6,9 +6,9 @@ import styles from './StatsSection.module.css'
 
 
 const stats = [
-  { number: 12, prefix: '+', text: 'Years of Experience' },
-  { number: 50, prefix: '+', text: 'Successful Projects' },
-  { number: 40, prefix: '+', text: 'Customers' },
+  { number: 5, prefix: '+', text: 'Years of Experience' },
+  { number: 20, prefix: '+', text: 'Successful Projects' },
+  { number: 30, prefix: '+', text: 'Customers' },
   { number: 100, prefix: '', suffix: '%', text: 'Quality' }
 ]
 
