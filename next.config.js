@@ -2,15 +2,15 @@
 const nextConfig = {
   reactStrictMode: true,
   webpack: (config, { dev, isServer }) => {
-    // Add CSS HMR fix only for development and client-side
+    // Only add HMR config in development and client-side
     if (dev && !isServer) {
       config.watchOptions = {
-        ...config.watchOptions,
-        ignored: /node_modules/,
+        ignored: ['**/node_modules', '**/.next'],
+        aggregateTimeout: 300,
+        poll: 1000,
       }
     }
     return config
   }
 }
-
 module.exports = nextConfig
