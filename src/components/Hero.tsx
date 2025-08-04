@@ -11,8 +11,8 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}>
-          <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[60px] font-[500] leading-[1.1] sm:leading-tight uppercase">
-            <div className="mb-1 sm:mb-2 whitespace-nowrap">
+          <h1 className="text-[24px] sm:text-[36px] md:text-[42px] lg:text-[60px] font-[500] leading-[1.1] sm:leading-tight uppercase">
+            <div className="mb-1 sm:mb-2 md:whitespace-nowrap">
               <span className="font-poppins">Built to </span>
               <span className="font-fluorescence">Work</span>
               <span className="font-poppins">. Built to </span>
