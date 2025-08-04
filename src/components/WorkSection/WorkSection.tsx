@@ -6,7 +6,7 @@ import styles from './WorkSection.module.css';
 
 const WorkSection = () => {
   const { setCursorVariant } = useCursor();
-  const images = ["/work-1.webp", "/work-2.webp", "/work-3.webp", "/work-4.webp"];
+  const images = ["/work1.jpg", "/work2.jpg", "/work3.jpg", "/work4.jpg"];
 
   // Optimize scroll handler
   const handleMouseEnter = useCallback(() => {
@@ -23,7 +23,7 @@ const WorkSection = () => {
 
   return (
     <section className={styles.workSection}>
-      <div 
+      <div
         style={{
           height: `${(images.length + 1) * 100}vh`,
           position: 'relative',

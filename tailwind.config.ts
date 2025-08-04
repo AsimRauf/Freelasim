@@ -14,6 +14,7 @@ export default {
       },
       fontFamily: {
         poppins: ['var(--font-poppins)'],
+        fluorescence: ['Fluorescence'],
       },
     },
   },

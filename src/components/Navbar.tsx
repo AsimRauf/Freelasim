@@ -28,7 +28,8 @@ const Navbar = () => {
                         justifyContent: 'space-between',
                         height: '60px',
                         width: '100%',
-                        backgroundColor: 'rgba(0, 0, 0, 0.37)',
+                        backgroundColor: 'rgba(255, 255, 255, 0.03)',
+                        border: '1px solid rgba(255, 255, 255, 0.08)',
                         backdropFilter: 'blur(20px)',
                         borderRadius: '100px',
                         padding: '3px 30px'
@@ -40,11 +41,11 @@ const Navbar = () => {
 
 
 
-                    <Link href="/" className="flex items-center">
+                    <Link href="/" className="flex items-center px-8">
                         <Image
-                            src="/logos/1.png"
+                            src="/logos/main-logo.svg"
                             alt="Logo"
-                            width={200}
+                            width={160}
                             height={100}
                             className="object-contain -ml-8" // Adjust -ml-x for the desired left positioning
                             priority
@@ -82,8 +83,9 @@ const Navbar = () => {
                                     top: '61px',
                                     right: '16px',
                                     width: '230px',
-                                    backgroundColor: '#111111',
-                                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                                    backgroundColor: 'rgba(255, 255, 255, 0.03)',
+                                    border: '1px solid rgba(255, 255, 255, 0.08)',
+                                    backdropFilter: 'blur(20px)',
                                     borderRadius: '16px',
                                     padding: '16px'
                                 }}
