@@ -7,8 +7,10 @@ export default function Home() {
     <main>
       <div
         style={{
-          background: 'radial-gradient(ellipse at center, rgba(41, 9, 68, 0.4), transparent 80%)',
-          backdropFilter: 'blur(40px)',
+          backgroundImage: 'url(/artboard1.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
         }}
       >
         <Hero />
