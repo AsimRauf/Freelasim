@@ -33,7 +33,7 @@ const Hero = () => {
       {/* Radial gradient blur */}
       <div className="absolute inset-0 z-[0] bg-gradient-radial from-purple-800/20 via-purple-600/10 to-transparent blur-[100px]"></div>
 
-      <div className="text-center pt-16 pb-8 w-full max-w-4xl">
+      <div className="text-center pt-16 pb-8 w-full max-w-4xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
