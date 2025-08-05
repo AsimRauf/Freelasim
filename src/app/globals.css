@@ -35,6 +35,64 @@ body {
   }
 }
 
+/* Extra small screens - smaller than 450px */
+@media (max-width: 450px) {
+  /* Hero section font sizes */
+  .hero-title {
+    font-size: 20px !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 10px !important;
+  }
+  
+  .hero-badge-text {
+    font-size: 10px !important;
+  }
+  
+  .hero-service-text {
+    font-size: 10px !important;
+  }
+  
+  .hero-button-text {
+    font-size: 12px !important;
+  }
+  
+  /* Portfolio/Work cards */
+  .portfolio-title {
+    font-size: 20px !important;
+  }
+  
+  .portfolio-subtitle {
+    font-size: 12px !important;
+  }
+  
+  .portfolio-card-title {
+    font-size: 12px !important;
+  }
+  
+  .portfolio-card-description {
+    font-size: 10px !important;
+  }
+  
+  .portfolio-tag {
+    font-size: 9px !important;
+  }
+  
+  /* General text elements */
+  .text-xs-custom {
+    font-size: 9px !important;
+  }
+  
+  .text-sm-custom {
+    font-size: 10px !important;
+  }
+  
+  .text-base-custom {
+    font-size: 12px !important;
+  }
+}
+
 .custom-scrollbar::-webkit-scrollbar {
   width: 8px;
 }

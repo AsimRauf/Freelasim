@@ -40,7 +40,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}>
           <div className="mb-4">
             <div className="inline-flex items-center bg-purple-500/10 border border-purple-400/20 rounded-full px-3 sm:px-4 py-2">
-              <p className="text-white/80 text-xs sm:text-sm mr-2 sm:mr-4">After Upwork and Fiverr, now on our own website.</p>
+              <p className="text-white/80 text-xs sm:text-sm mr-2 sm:mr-4 hero-badge-text">After Upwork and Fiverr, now on our own website.</p>
               <a href="#" className="mr-1 sm:mr-2">
                 <img src="/logos/upwork-white.svg" alt="Upwork" className="h-4 w-4 sm:h-6 sm:w-6" />
               </a>
@@ -49,7 +49,7 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          <h1 className="text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px] font-bold leading-tight">
+          <h1 className="text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px] font-bold leading-tight hero-title">
             <span className="text-purple-400 font-young-serif italic">Turning Ambitions into Applications.</span>
             <br />
             <span className="font-poppins">Welcome to Buildsify.</span>
@@ -57,18 +57,18 @@ const Hero = () => {
 
           <div className="mt-8 flex flex-wrap justify-center gap-1 sm:gap-3">
             <div className="bg-purple-500/10 border border-purple-400/20 rounded-full px-2 sm:px-4 py-1 sm:py-2">
-              <p className="text-white/80 text-xs sm:text-sm">Custom Web Development</p>
+              <p className="text-white/80 text-xs sm:text-sm hero-service-text">Custom Web Development</p>
             </div>
             <div className="bg-purple-500/10 border border-purple-400/20 rounded-full px-2 sm:px-4 py-1 sm:py-2">
-              <p className="text-white/80 text-xs sm:text-sm">AI Workflow Optimization</p>
+              <p className="text-white/80 text-xs sm:text-sm hero-service-text">AI Workflow Optimization</p>
             </div>
             <div className="bg-purple-500/10 border border-purple-400/20 rounded-full px-2 sm:px-4 py-1 sm:py-2">
-              <p className="text-white/80 text-xs sm:text-sm">LinkedIn Profile Optimization</p>
+              <p className="text-white/80 text-xs sm:text-sm hero-service-text">LinkedIn Profile Optimization</p>
             </div>
           </div>
 
           <button
-            className="mt-10 flex items-center justify-center gap-2 mx-auto bg-purple-500/80 text-white px-4 sm:px-8 py-2 sm:py-4 rounded-full transition-all group text-sm sm:text-lg font-semibold hover:bg-purple-500/10 hover:border hover:border-purple-400/20 hover:text-white"
+            className="mt-10 flex items-center justify-center gap-2 mx-auto bg-purple-500/80 text-white px-4 sm:px-8 py-2 sm:py-4 rounded-full transition-all group text-sm sm:text-lg font-semibold hover:bg-purple-500/10 hover:border hover:border-purple-400/20 hover:text-white hero-button-text"
           >
             Schedule a call
             <BsArrowRight className="transform group-hover:translate-x-2 transition-transform duration-700" size={16} />

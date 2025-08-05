@@ -45,10 +45,10 @@ const PortfolioSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 portfolio-title">
             Our <span className="text-purple-400">Portfolio</span>
           </h2>
-          <p className="text-white/70 text-sm sm:text-base max-w-2xl mx-auto">
+          <p className="text-white/70 text-sm sm:text-base max-w-2xl mx-auto portfolio-subtitle">
             Showcasing our latest projects and successful collaborations
           </p>
         </motion.div>
@@ -75,10 +75,10 @@ const PortfolioSection = () => {
               </div>
               
               <div className="p-4 sm:p-6">
-                <h3 className="text-white font-semibold text-sm sm:text-base mb-2 truncate">
+                <h3 className="text-white font-semibold text-sm sm:text-base mb-2 truncate portfolio-card-title">
                   {item.title}
                 </h3>
-                <p className="text-white/70 text-xs sm:text-sm mb-3 overflow-hidden" style={{
+                <p className="text-white/70 text-xs sm:text-sm mb-3 overflow-hidden portfolio-card-description" style={{
                   display: '-webkit-box',
                   WebkitLineClamp: 2,
                   WebkitBoxOrient: 'vertical'
@@ -90,7 +90,7 @@ const PortfolioSection = () => {
                   {item.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full text-xs"
+                      className="bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full text-xs portfolio-tag"
                     >
                       {tag}
                     </span>
