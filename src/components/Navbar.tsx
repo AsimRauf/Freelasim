@@ -78,17 +78,8 @@ const Navbar = () => {
                             <motion.div
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                style={{
-                                    position: 'absolute',
-                                    top: '61px',
-                                    right: '16px',
-                                    width: '230px',
-                                    backgroundColor: 'rgba(255, 255, 255, 0.03)',
-                                    border: '1px solid rgba(255, 255, 255, 0.08)',
-                                    backdropFilter: 'blur(20px)',
-                                    borderRadius: '16px',
-                                    padding: '16px'
-                                }}
+                                className="absolute top-[61px] right-[16px] w-[230px] bg-purple-900/40 border border-white/20 rounded-2xl p-4"
+                                style={{ backdropFilter: 'blur(24px)' }}
                             >
                                 <div className="flex flex-col gap-2">
                                     <Link href="/home" className="text-[15px] font-[500] text-white hover:bg-[#222222] px-3 py-1 rounded-lg transition-all">

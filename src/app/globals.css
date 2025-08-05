@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Fluorescence';
-  src: url('./fonts/Fluorescence.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Young Serif';
+  src: url('./fonts/YoungSerif-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');

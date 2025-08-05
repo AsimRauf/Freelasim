@@ -14,7 +14,10 @@ export default {
       },
       fontFamily: {
         poppins: ['var(--font-poppins)'],
-        fluorescence: ['Fluorescence'],
+        'young-serif': ['Young Serif', 'serif'],
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
     },
   },
