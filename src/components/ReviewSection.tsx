@@ -51,18 +51,18 @@ const ReviewSection = () => {
         <div className="max-w-7xl mx-auto">
           {/* Upwork & Fiverr Badge */}
           <div className="flex justify-center mb-8">
-            <div className="inline-flex items-center bg-purple-500/10 border border-purple-400/20 rounded-full px-4 sm:px-6 py-2 sm:py-3">
-              <img src="/logos/upwork-white.svg" alt="Upwork" className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
-              <img src="/logos/fiverr-white.svg" alt="Fiverr" className="h-5 w-5 sm:h-6 sm:w-6 mr-3" />
-              <p className="text-white/80 text-sm sm:text-base font-medium">Verified Reviews from Upwork, Fiverr & Direct Clients</p>
+            <div className="inline-flex items-center bg-purple-500/10 border border-purple-400/20 rounded-full px-2 sm:px-3 py-1 sm:py-2">
+              <img src="/logos/upwork-white.svg" alt="Upwork" className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+              <img src="/logos/fiverr-white.svg" alt="Fiverr" className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+              <p className="text-white/80 text-[10px] sm:text-xs md:text-sm font-medium">Verified Reviews from Upwork, Fiverr & Direct Clients</p>
             </div>
           </div>
 
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-purple-400 font-young-serif italic mb-6">
+          <div className="text-center mb-8">
+            <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-purple-400 font-young-serif italic">
               Client Reviews
             </h2>
-            <p className="text-white/70 text-lg sm:text-xl max-w-2xl mx-auto">
+            <p className="text-white/70 text-sm sm:text-lg md:text-xl max-w-2xl mx-auto">
               What our clients say about working with us
             </p>
           </div>

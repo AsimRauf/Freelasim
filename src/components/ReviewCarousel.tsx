@@ -91,15 +91,15 @@ export function ReviewCarousel({ reviews }: ReviewCarouselProps) {
     }, [percentage, index])
     
     return (
-      <div className="flex items-center gap-3">
-        <div className="relative w-24 h-2 bg-white/20 rounded-full overflow-hidden">
+      <div className="flex items-center gap-2 sm:gap-3">
+        <div className="relative w-16 sm:w-24 h-1.5 sm:h-2 bg-white/20 rounded-full overflow-hidden">
           <div 
             className="absolute top-0 left-0 h-full bg-white rounded-full transition-all duration-300 ease-out"
             style={{ width: `${animatedWidth}%` }}
           />
         </div>
         <Smile 
-          className={`w-5 h-5 transition-all duration-500 ${
+          className={`w-4 h-4 sm:w-5 sm:h-5 transition-all duration-500 ${
             isFullRating && animatedWidth >= 95
               ? 'text-white opacity-100 animate-pulse' 
               : 'text-white/40 opacity-60'
@@ -135,22 +135,22 @@ export function ReviewCarousel({ reviews }: ReviewCarouselProps) {
           {reviews.map((review, index) => (
             <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
               <Card className="bg-purple-500/10 border border-purple-400/20 hover:bg-purple-500/15 transition-colors h-full">
-                <CardContent className="p-6 flex flex-col h-full">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-purple-600/30 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                      <span className="text-purple-300 font-bold text-lg">{review.initials}</span>
+                <CardContent className="p-4 sm:p-6 flex flex-col h-full">
+                  <div className="flex items-center mb-3 sm:mb-4">
+                    <div className="w-8 h-8 sm:w-12 sm:h-12 bg-purple-600/30 rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
+                      <span className="text-purple-300 font-bold text-sm sm:text-lg">{review.initials}</span>
                     </div>
                     <div className="min-w-0 flex-grow">
-                      <h3 className="text-white font-semibold text-lg truncate">{review.name}</h3>
+                      <h3 className="text-white font-semibold text-sm sm:text-lg truncate">{review.name}</h3>
                       <div className="flex items-center">
-                        <p className="text-purple-300 text-sm truncate">{review.company}</p>
+                        <p className="text-purple-300 text-xs sm:text-sm truncate">{review.company}</p>
                         {review.company === "Upwork Client" && (
-                          <img src="/logos/upwork-white.svg" alt="Upwork" className="h-4 w-4 ml-2 flex-shrink-0" />
+                          <img src="/logos/upwork-white.svg" alt="Upwork" className="h-3 w-3 sm:h-4 sm:w-4 ml-1 sm:ml-2 flex-shrink-0" />
                         )}
                       </div>
                     </div>
                   </div>
-                  <p className="text-white/80 text-sm leading-relaxed mb-4 flex-grow">
+                  <p className="text-white/80 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 flex-grow">
                     "{review.review}"
                   </p>
                   <div className="mt-auto">
