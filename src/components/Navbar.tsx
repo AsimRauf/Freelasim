@@ -19,21 +19,10 @@ const Navbar = () => {
     }, [])
 
     return (
-        <div className="fixed w-full flex justify-center p-4 z-[999]">
+        <div className="w-full bg-purple-500/10 border-b border-purple-400/20 z-[999]">
             <div className="w-full max-w-[1480px] mx-auto px-4">
                 <motion.div
-                    style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                        height: '60px',
-                        width: '100%',
-                        backgroundColor: 'rgba(255, 255, 255, 0.03)',
-                        border: '1px solid rgba(255, 255, 255, 0.08)',
-                        backdropFilter: 'blur(20px)',
-                        borderRadius: '100px',
-                        padding: '3px 30px'
-                    }}
+                    className="flex items-center justify-between h-16 w-full px-6"
                     initial={{ y: -100 }}
                     animate={{ y: 0 }}
                     transition={{ duration: 0.5 }}
@@ -78,7 +67,7 @@ const Navbar = () => {
                             <motion.div
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                className="absolute top-[61px] right-[16px] w-[230px] bg-purple-900/40 border border-white/20 rounded-2xl p-4"
+                                className="absolute top-[61px] right-[16px] w-[230px] bg-purple-900/40 border border-white/20 rounded-2xl p-4 z-[9999]"
                                 style={{ backdropFilter: 'blur(24px)' }}
                             >
                                 <div className="flex flex-col gap-2">

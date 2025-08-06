@@ -5,10 +5,10 @@ import { BsArrowRight } from 'react-icons/bs'
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-x-hidden">
       {/* Grid pattern background */}
       <div 
-        className="absolute inset-0 z-[-3] opacity-10"
+        className="absolute inset-0 z-0 opacity-10"
         style={{
           backgroundImage: `
             linear-gradient(rgba(147, 51, 234, 0.3) 1px, transparent 1px),
@@ -19,19 +19,17 @@ const Hero = () => {
       ></div>
       
       {/* Grid fade effect from top and bottom */}
-      <div className="absolute inset-0 z-[-2] bg-gradient-to-b from-black via-transparent via-transparent to-black" style={{
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-black via-transparent via-transparent to-black" style={{
         background: 'linear-gradient(to bottom, black 0%, transparent 25%, transparent 60%, black 100%)'
       }}></div>
       
-      {/* Radial fade effect to reduce grid opacity in center */}
-      <div className="absolute inset-0 z-[-4]" style={{
-        background: 'radial-gradient(circle at center, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 30%, transparent 60%)'
+      {/* Purple gradient overlay */}
+      <div className="absolute inset-0 z-0" style={{
+        background: 'linear-gradient(135deg, rgba(147, 51, 234, 0.15) 0%, rgba(88, 28, 135, 0.1) 25%, rgba(0, 0, 0, 0.8) 50%, rgba(88, 28, 135, 0.1) 75%, rgba(147, 51, 234, 0.15) 100%)'
       }}></div>
       
-      {/* Purple blur line */}
-      <div className="absolute top-1/2 left-1/2 w-[100vw] h-[200px] bg-purple-500/30 -translate-x-1/2 -translate-y-1/2 z-[-1] blur-[150px] rotate-[-30deg]"></div>
-      {/* Radial gradient blur */}
-      <div className="absolute inset-0 z-[0] bg-gradient-radial from-purple-800/20 via-purple-600/10 to-transparent blur-[100px]"></div>
+      {/* Optimized purple blur line - tilted behind content */}
+      <div className="absolute top-1/2 left-1/2 w-[600px] h-48 bg-purple-500/20 -translate-x-1/2 -translate-y-1/2 z-0 blur-[80px] rotate-[-25deg]"></div>
 
       <div className="text-center pt-16 pb-8 w-full max-w-4xl relative z-10">
         <motion.div
@@ -68,10 +66,10 @@ const Hero = () => {
           </div>
 
           <button
-            className="mt-10 flex items-center justify-center gap-2 mx-auto bg-purple-500/80 text-white px-4 sm:px-8 py-2 sm:py-4 rounded-full transition-all group text-sm sm:text-lg font-semibold hover:bg-purple-500/10 hover:border hover:border-purple-400/20 hover:text-white hero-button-text"
+            className="mt-10 flex items-center justify-center gap-2 mx-auto bg-purple-500/80 text-white px-4 sm:px-8 py-2 sm:py-4 rounded-full transition-colors transition-shadow group text-sm sm:text-lg font-semibold hover:bg-purple-500/10 hover:border hover:border-purple-400/20 hover:text-white hero-button-text"
           >
             Schedule a call
-            <BsArrowRight className="transform group-hover:translate-x-2 transition-transform duration-700" size={16} />
+            <BsArrowRight className="transform group-hover:translate-x-2 transition-transform duration-300" size={16} />
           </button>
         </motion.div>
       </div>
