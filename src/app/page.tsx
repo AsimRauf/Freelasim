@@ -1,11 +1,11 @@
 import Hero from '@/components/Hero'
-import PortfolioSection from '@/components/PortfolioSection'
+import ReviewSection from '@/components/ReviewSection'
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <PortfolioSection />
+      <ReviewSection />
     </main>
   )
 }

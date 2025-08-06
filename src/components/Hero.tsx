@@ -31,7 +31,7 @@ const Hero = () => {
       {/* Optimized purple blur line - tilted behind content */}
       <div className="absolute top-1/2 left-1/2 w-[600px] h-48 bg-purple-500/20 -translate-x-1/2 -translate-y-1/2 z-0 blur-[80px] rotate-[-25deg]"></div>
 
-      <div className="text-center pt-16 pb-8 w-full max-w-4xl relative z-10">
+      <div className="text-center pt-8 sm:pt-12 md:pt-16 pb-8 w-full max-w-4xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
